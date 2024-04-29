@@ -31,6 +31,8 @@ The firmware will only deploy the systems side-by-side, but being **un-modified 
 
 Partition layout in the firmware: [DTB partitions](https://7ji.github.io/ampart-web-reporter/?dsnapshot=ce_system::213909504:2%20ee_system::1111490560:2%20frp::2097152:1%20factory::8388608:17%20vendor_boot_a::25165824:1%20tee::33554432:1%20logo::8388608:1%20misc::2097152:1%20dtbo_a::2097152:1%20cri_data::8388608:2%20param::16777216:2%20odm_ext_a::16777216:1%20oem_a::33554432:1%20boot_a::67108864:1%20rsv::16777216:1%20metadata::16777216:1%20vbmeta_a::2097152:1%20vbmeta_system_a::2097152:1%20super::2415919104:1%20ce_storage::4294967296:4%20ee_storage::4294967296:4%20userdata::-1:4)
 
+_The [Vontar X4 image below](#vontar-x4) should also work on this box_
+
 ### BesTV R3300L
 
 [Download from Github release](../../releases/tag/bestv-r3300l)
@@ -85,3 +87,30 @@ Partition layout in the firmware: [DTB partitions](https://7ji.github.io/ampart-
 *The image should work with all S905X (strictly X, not L/W/D) boxes based on p212 reference board with 1G RAM and at least 8G of eMMC in theory, but it's untested*
 
 Partition layout in the firmware: [DTB partitions](https://7ji.github.io/ampart-web-reporter/?dsnapshot=ce_system::239075328:2%20ee_system::1111490560:2%20logo::33554432:1%20recovery::33554432:1%20rsv::8388608:1%20tee::8388608:1%20crypt::33554432:1%20misc::33554432:1%20boot::33554432:1%20system::2147483648:1%20cache::536870912:2%20ce_storage::536870912:4%20ee_storage::1073741824:4%20data::-1:4)
+
+
+### Vontar X4
+
+[Download from Github release](../../releases/tag/vontar-x4)
+
+|SoC family|SoC name|Brand|Model|
+|-|-|-|-|
+|SC2|S905X4|Vontar|X4|
+
+|System|Version|
+|-|-|
+|Android|ah218.VONTAR_X4_1000M_11.2023.03.12.21.20|
+|CoreELEC|CoreELEC-Amlogic-ne.aarch64-21.0-Omega|
+|EmuELEC|EmuELEC-Amlogic-ng.aarch64-4.7|
+
+**[hepacker] command**:
+```
+python hepacker.py ah218.VONTAR_X4_1000M_11.2023.03.12.21.20.img CoreELEC-Amlogic-ne.aarch64-21.0-Omega.tar sc2_s905x4_4g_1gbit 1G EmuELEC-Amlogic-ng.aarch64-4.7.tar sc2_s905x4_4g_1gbit 4G HybridELEC_sc2_s905x4_ah218_VONTAR_X4_1000M_Android-11.0-2023.03.12.21.20_CoreELEC-21.0-ne_EmuELEC-v4.7-ng.img
+```
+
+Partition layout in the firmware: [DTB partitions](https://7ji.github.io/ampart-web-reporter/?dsnapshot=ce_system::258998272:2%20ee_system::1195376640:2%20frp::2097152:1%20factory::8388608:17%20vendor_boot_a::25165824:1%20tee::33554432:1%20logo::8388608:1%20misc::2097152:1%20dtbo_a::2097152:1%20cri_data::8388608:2%20param::16777216:2%20odm_ext_a::16777216:1%20oem_a::33554432:1%20boot_a::67108864:1%20rsv::16777216:1%20metadata::16777216:1%20vbmeta_a::2097152:1%20vbmeta_system_a::2097152:1%20super::2415919104:1%20ce_storage::1073741824:4%20ee_storage::4294967296:4%20userdata::-1:4)
+
+_The [HK1 RBox X4 image above](#hk1-rbox-x4) should also work on this box_
+
+
+[hepacker]: https://github.com/HybridELEC/hepacker
