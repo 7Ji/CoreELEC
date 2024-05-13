@@ -2,11 +2,25 @@
 
 Release-only branch for the HybridELEC **Android + CoreELEC + EmuELEC** USB burning image.   
 
+For open-source generic images that could be burnt on USB / SD card, check out the [hybrid-ng branch](https://github.com/7Ji/HybridELEC/tree/android-burning)
+
+For open-source image that could be burnt on Xiaomi MiBox3's eMMC, check out the [hybrid-1.0 branch](https://github.com/7Ji/HybridELEC/tree/hybrid-1.0)
+
+## Disclaimer
+
 The source code cannot be released since these are modified from the stock/custom Android firmware, and releasing the decompiled source is against the license.
 
-The burning images only contain the un-modified Android system firmware, the un-modified latest CoreELEC stable firmware, and the un-modified latest EmuELEC stable firmware. So you will see the CoreELEC/EmuELEC marked as **official** inside the system, but **do not seek for help from CoreELEC/EmuELEC since these images are not released directly by them, and would bother them and waste their precious time/labour**.
+However, all of the tools needed are open-sourced, these include:
+- [hepacker](https://github.com/HybridELEC/hepacker), the script to pack Android + CoreELEC + EmuELEC images into HybridELEC 3in1 image
+- [ampart](https://github.com/7Ji/ampart), the tool to adjust partition layout in the Android image
+- [ampack](https://github.com/7Ji/ampack), the tool to unpack and repack Amlogic Android burning image
+
+Also, the burning images only contain the un-modified Android system firmware, the un-modified latest CoreELEC stable firmware, and the un-modified latest EmuELEC stable firmware, so I don't think it needed to repost the sources for CE and EE which are already publicly available. 
+
+In the CE/EE subsystems, you will see the CoreELEC/EmuELEC marked as **official** inside the system, but **do not seek for help from CoreELEC/EmuELEC since these images are not released directly by them, and would bother them and waste their precious time/labour**.
 
 Send an e-mail to pugokushin@gmail.com if you want to remove a certain firmware for a device.
+
 
 ## Rebooter
 The firmware will only deploy the systems side-by-side, but being **un-modified and as-is** means you will have to adjust the bootup environment to switch the system. If you need a GUI easy-to-use rebooter, check https://github.com/7Ji/HybridELEC_Rebooter
