@@ -2,6 +2,8 @@
 
 Release-only branch for the HybridELEC **Android + CoreELEC + EmuELEC** USB burning image.   
 
+**Images here need to be flashed onto eMMC with Amlogic USB Burning Tool just like a stock Android image. By flashing them you would lose all data on eMMC. No incremental update, no installation for SD card or USB drive.**
+
 For open-source generic images that could be burnt on USB / SD card, check out the [hybrid-ng branch](https://github.com/7Ji/HybridELEC/tree/android-burning)
 
 For open-source image that could be burnt on Xiaomi MiBox3's eMMC, check out the [hybrid-1.0 branch](https://github.com/7Ji/HybridELEC/tree/hybrid-1.0)
